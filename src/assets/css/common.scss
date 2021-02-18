@@ -1,0 +1,65 @@
+@for $i from 10 through 50 {
+  .fs-#{$i} {
+    font-size: $i * 1px;
+  }
+}
+
+$colors: #fff, #000, #333, #666, #999;
+$colorText: fff, '000', '333', '666', '999';
+
+@for $i from 1 through length($colors) {
+  $key: nth($colorText, $i);
+  $color: nth($colors, $i);
+  .bg-#{$key} {
+    background-color: $color;
+  }
+  .color-#{$key} {
+    color: $color;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-row-start {
+  justify-content: flex-start;
+}
+.flex-row-center {
+  justify-content: center;
+}
+.flex-row-end {
+  justify-content: flex-end;
+}
+.flex-row-between {
+  justify-content: space-between;
+}
+.flex-col-start {
+  align-items: flex-start;
+}
+.flex-col-center {
+  align-items: center;
+}
+.flex-col-end {
+  align-items: flex-end;
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
+}
+.flex-1 {
+  flex: 1;
+}
+
+p { margin: 0; }

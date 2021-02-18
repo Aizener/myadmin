@@ -1,32 +1,46 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <el-container class="container">
+    <el-aside class="hidden-xs-only" width="220px"><Aside /></el-aside>
+    <el-container>
+      <el-header><Header /></el-header>
+      <el-main><Main /></el-main>
+      <el-footer><Footer /></el-footer>
+    </el-container>
+  </el-container>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Aside from '@/views/Aside'
+import Header from '@/views/Header'
+import Main from '@/views/Main'
+import Footer from '@/views/Footer'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'app',
+  components: {
+    Aside,
+    Header,
+    Main,
+    Footer
   }
+}
+</script>
+
+<style>
+.el-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.el-header {
+  height: auto !important;
+}
+.el-main {
+  padding: 0 !important;
+  background-color: rgb(242, 248, 249) !important;
+}
+.el-header, .el-footer {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 </style>
