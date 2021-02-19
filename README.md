@@ -28,4 +28,5 @@ yarn lint
 4. 使用i18n来做一下国际化；
 5. 暂时以上这么多，能先做完就不错了...
 ### Customize configuration
+（测试：为什么commit更改后并push后，没有对应的contribution？）
 See [Configuration Reference](https://cli.vuejs.org/config/).
