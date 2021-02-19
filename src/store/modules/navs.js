@@ -9,9 +9,9 @@ export default {
         indexName: '/'
       },
       {
-        name: '系统管理',
-        label: '系统管理',
-        indexName: '/system'
+        name: '用户管理',
+        label: '用户管理',
+        indexName: '/users'
       },
       {
         name: '内容管理',
@@ -19,9 +19,9 @@ export default {
         indexName: '/content'
       },
       {
-        name: '用户管理',
-        label: '用户管理',
-        indexName: '/users'
+        name: '系统管理',
+        label: '系统管理',
+        indexName: '/system'
       },
       {
         name: '栏目一',

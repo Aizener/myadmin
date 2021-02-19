@@ -11,6 +11,16 @@
         :label="nav.label"
       >{{ nav.name }}</el-tab-pane>
     </el-tabs>
+    <el-popover
+      placement="top-start"
+      width="200"
+      trigger="hover">
+      <div class="cotent flex flex-row-between">
+        <p class="content-left">Hi，Admin</p>
+        <p class="content-right color-999 pointer" @click="handleQuite">退出</p>
+      </div>
+      <i slot="reference" class="el-icon-user user-logo"></i>
+    </el-popover>
   </div>
 </template>
 
@@ -42,6 +52,18 @@ export default {
     ...mapMutations('navs', [
       'setCurrName'
     ]),
+    handleQuite () {
+      this.$confirm('你是否要退出登录?', '登出提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$message({
+          type: 'success',
+          message: '删除成功!'
+        })
+      })
+    },
     handleTab (e) {
       if (e.name === this.tabName) {
         return
@@ -55,6 +77,16 @@ export default {
 </script>
 
 <style lang="scss">
+.header {
+  position: relative;
+  .user-logo {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    font-size: 28px;
+    z-index: 10;
+  }
+}
 .el-tabs {
   padding-top: 64px;
   &__header {

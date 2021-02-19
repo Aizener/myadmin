@@ -2,6 +2,18 @@
   .fs-#{$i} {
     font-size: $i * 1px;
   }
+  .ml-#{$i} {
+    margin-left: $i * 1px;
+  }
+  .mt-#{$i} {
+    margin-top: $i * 1px;
+  }
+  .mr-#{$i} {
+    margin-right: $i * 1px;
+  }
+  .mb-#{$i} {
+    margin-bottom: $i * 1px;
+  }
 }
 
 $colors: #fff, #000, #333, #666, #999;
@@ -18,6 +30,12 @@ $colorText: fff, '000', '333', '666', '999';
   }
 }
 
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
 .flex {
   display: flex;
 }
@@ -60,6 +78,9 @@ $colorText: fff, '000', '333', '666', '999';
 }
 .flex-1 {
   flex: 1;
+}
+.pointer {
+  cursor: pointer;
 }
 
 p { margin: 0; }

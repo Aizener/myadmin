@@ -16,7 +16,6 @@ export default {
 .main {
   padding: 30px;
   &-container {
-    padding: 20px;
     background-color: #fff;
   }
 }
