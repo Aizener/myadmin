@@ -58,7 +58,7 @@ export default {
           name: '提问管理',
           index: '/content/3',
           children: [
-            { name: '提问列表', index: '/content/question/list' }
+            { name: '提问列表', index: '/content/questions' }
           ]
         },
         {

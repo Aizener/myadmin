@@ -28,6 +28,11 @@ export default [
         path: 'record',
         name: 'Record',
         component: () => import(/* webpackChunkName: "HomeIndex" */ '@/views/system/Record.vue')
+      },
+      {
+        path: 'group/manage',
+        name: 'GroupManage',
+        component: () => import(/* webpackChunkName: "HomeIndex" */ '@/views/system/group/Manage.vue')
       }
     ]
   },
@@ -57,7 +62,7 @@ export default [
         component: () => import(/* webpackChunkName: "HomeIndex" */ '@/views/content/Question.vue')
       },
       {
-        path: 'question/list',
+        path: 'questions',
         name: 'QuestionList',
         component: () => import(/* webpackChunkName: "HomeIndex" */ '@/views/content/QuestionList.vue')
       },
@@ -95,7 +100,7 @@ export default [
       },
       {
         path: 'record',
-        name: 'Record',
+        name: 'InviteRecord',
         component: () => import(/* webpackChunkName: "HomeIndex" */ '@/views/users/Record.vue')
       },
       {

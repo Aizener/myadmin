@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import {
   Container, Aside, Header, Main, Footer, Menu, MenuItem, Submenu, MenuItemGroup, Popover,
-  Tabs, TabPane, Button, Table, TableColumn, Input, Image, Pagination
+  Tabs, TabPane, Button, Table, TableColumn, Input, Image, Pagination, Dropdown, DropdownMenu,
+  DropdownItem, Checkbox
 } from 'element-ui'
 
 Vue
@@ -23,3 +24,7 @@ Vue
   .use(Input)
   .use(Image)
   .use(Pagination)
+  .use(Dropdown)
+  .use(DropdownMenu)
+  .use(DropdownItem)
+  .use(Checkbox)

@@ -145,7 +145,7 @@ export default {
   &__input {
     width: 220px;
     height: 35px;
-    & /deep/ .el-input__inner {
+    .el-input__inner {
       height: 35px;
     }
   }
