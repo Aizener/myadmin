@@ -2,7 +2,7 @@ import Vue from 'vue'
 import {
   Container, Aside, Header, Main, Footer, Menu, MenuItem, Submenu, MenuItemGroup, Popover,
   Tabs, TabPane, Button, Table, TableColumn, Input, Image, Pagination, Dropdown, DropdownMenu,
-  DropdownItem, Checkbox, Tree
+  DropdownItem, Checkbox, Tree, DatePicker
 } from 'element-ui'
 
 Vue
@@ -29,3 +29,4 @@ Vue
   .use(DropdownItem)
   .use(Checkbox)
   .use(Tree)
+  .use(DatePicker)

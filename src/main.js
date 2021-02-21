@@ -6,8 +6,10 @@ import './plugins/element.js'
 import 'element-ui/lib/theme-chalk/display.css'
 import 'normalize.css'
 import './assets/css/common.scss'
+import * as echarts from 'echarts'
 
 Vue.config.productionTip = false
+Vue.prototype.$echarts = echarts
 
 new Vue({
   router,
