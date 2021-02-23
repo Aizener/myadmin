@@ -3,14 +3,18 @@ var router = express.Router();
 var os = require('os');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.status(500).json({
-    systemName: os.hostname(),
-    systemType: os.type() + os.release(),
-    systemPlatform: os.platform(),
-    systemArch: os.arch(),
-    systemTotal: (os.totalmem()/1024/1024/1024).toFixed(1) + 'G',
-    framework: 'Express4.x'
+router.get('/system/info', function(req, res, next) {
+  const data = [
+    { info: '服务器地址', content: os.hostname() },
+    { info: '操作系统', content: os.type() + os.release() },
+    { info: '运行环境', content: os.platform() },
+    { info: '系统类型', content: os.arch() },
+    { info: '内存大小', content: (os.totalmem()/1024/1024/1024).toFixed(1) + 'G' },
+    { info: '开发框架', content: 'Express4.x' }
+  ]
+  res.status(200).json({
+    code: 200,
+    data
   })
 });
 

@@ -53,6 +53,11 @@ export default {
       }]
     }
   },
+  created () {
+    this.$api.getSystemInfo().then(res => {
+      this.tableData = res.data
+    })
+  },
   mounted () {
     const barCharts = this.$echarts.init(document.getElementById('bar-charts'))
     barCharts.setOption({

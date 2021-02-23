@@ -7,9 +7,11 @@ import 'element-ui/lib/theme-chalk/display.css'
 import 'normalize.css'
 import './assets/css/common.scss'
 import * as echarts from 'echarts'
+import api from '@/util/http'
 
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
+Vue.prototype.$api = api
 
 new Vue({
   router,
