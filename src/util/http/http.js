@@ -4,6 +4,7 @@ const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000'
 class HttpRequest {
   constructor () {
     this.axios = axios.create()
+    this.setInterceptors(this.axios)
   }
 
   getConfig () {
@@ -18,7 +19,6 @@ class HttpRequest {
 
   setInterceptors (instance) {
     instance.interceptors.request.use(config => {
-      console.log(config)
       return config
     })
 
@@ -29,7 +29,6 @@ class HttpRequest {
 
   request (params) {
     const config = Object.assign(this.getConfig(), params)
-    this.setInterceptors(this.axios)
     return this.axios(config)
   }
 }

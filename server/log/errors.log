@@ -2,3 +2,11 @@
 [2021-02-23T19:15:32.016] [ERROR] index - 获取系统信息error
 [2021-02-23T19:20:10.074] [ERROR] default - 获取系统信息error
 [2021-02-23T19:28:16.557] [ERROR] default - 获取系统信息error
+[2021-02-24T15:45:27.926] [ERROR] default - TypeError: dateFormat is not a function
+    at res.forEach.item (D:\Cola\study\myadmin\server\service\users.js:14:26)
+    at Array.forEach (<anonymous>)
+    at exports.findUsers (D:\Cola\study\myadmin\server\service\users.js:13:9)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[2021-02-24T16:28:00.920] [ERROR] default - ReferenceError: res is not defined
+    at exports.findUsers (D:\Cola\study\myadmin\server\service\users.js:19:14)
+    at process._tickCallback (internal/process/next_tick.js:68:7)

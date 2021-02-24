@@ -14,10 +14,10 @@
         label="内容"
       ></el-table-column>
     </el-table>
-    <div class="charts mt-20">
+    <!-- <div class="charts mt-20">
       <div class="bar-charts" id="bar-charts"></div>
       <div class="pie-charts" id="pie-charts"></div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -26,31 +26,7 @@ export default {
   name: 'Home',
   data () {
     return {
-      tableData: [{
-        info: '服务器地址',
-        content: '909.ecuca.net:10526'
-      }, {
-        info: '操作系统',
-        content: 'Linux'
-      }, {
-        info: '运行环境',
-        content: 'Centos OS7'
-      }, {
-        info: 'PHP版本',
-        content: '5.6.8'
-      }, {
-        info: '最大上传限制',
-        content: '80M'
-      }, {
-        info: 'ZEND版本',
-        content: '2.6.0'
-      }, {
-        info: '最大执行时间',
-        content: '600S'
-      }, {
-        info: '脚本运行占用最大内存',
-        content: '256M'
-      }]
+      tableData: []
     }
   },
   created () {
@@ -59,48 +35,48 @@ export default {
     })
   },
   mounted () {
-    const barCharts = this.$echarts.init(document.getElementById('bar-charts'))
-    barCharts.setOption({
-      title: {
-        text: 'ECharts 入门示例'
-      },
-      tooltip: {},
-      legend: {
-        data: ['销量']
-      },
-      xAxis: {
-        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-      },
-      yAxis: {},
-      series: [{
-        name: '销量',
-        type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
-      }]
-    })
-    const pieCharts = this.$echarts.init(document.getElementById('pie-charts'))
-    pieCharts.setOption({
-      title: {
-        text: 'ECharts 入门示例'
-      },
-      tooltip: {},
-      legend: {
-        data: ['销量']
-      },
-      xAxis: {
-        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-      },
-      yAxis: {},
-      series: [{
-        name: '销量',
-        type: 'pie',
-        data: [
-          { name: 'A', value: 20 },
-          { name: 'B', value: 30 },
-          { name: 'C', value: 10 }
-        ]
-      }]
-    })
+    // const barCharts = this.$echarts.init(document.getElementById('bar-charts'))
+    // barCharts.setOption({
+    //   title: {
+    //     text: 'ECharts 入门示例'
+    //   },
+    //   tooltip: {},
+    //   legend: {
+    //     data: ['销量']
+    //   },
+    //   xAxis: {
+    //     data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+    //   },
+    //   yAxis: {},
+    //   series: [{
+    //     name: '销量',
+    //     type: 'bar',
+    //     data: [5, 20, 36, 10, 10, 20]
+    //   }]
+    // })
+    // const pieCharts = this.$echarts.init(document.getElementById('pie-charts'))
+    // pieCharts.setOption({
+    //   title: {
+    //     text: 'ECharts 入门示例'
+    //   },
+    //   tooltip: {},
+    //   legend: {
+    //     data: ['销量']
+    //   },
+    //   xAxis: {
+    //     data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+    //   },
+    //   yAxis: {},
+    //   series: [{
+    //     name: '销量',
+    //     type: 'pie',
+    //     data: [
+    //       { name: 'A', value: 20 },
+    //       { name: 'B', value: 30 },
+    //       { name: 'C', value: 10 }
+    //     ]
+    //   }]
+    // })
   }
 }
 </script>

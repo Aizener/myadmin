@@ -54,7 +54,6 @@ export default {
         if (paths.length > 3) {
           path = '/' + paths[1] + '/' + paths[2]
         }
-        console.log(path)
         // 为了让/pathname和/pathname/得到一致的内容
         const endIndex = path.charAt(path.length - 1) === '/' && path.length > 1 ? path.length - 1 : path.length
         this.tabActive = '/' + path.substring(1, endIndex)
